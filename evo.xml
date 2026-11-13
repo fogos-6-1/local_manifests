@@ -9,12 +9,11 @@
   <project name="android_vendor_qcom_opensource_healthd-ext" path="vendor/qcom/opensource/healthd-ext" remote="sedona61" revision="refs/heads/lineage-24.0-6.1" />
   <remove-project path="hardware/qcom-caf/bootctrl" optional="true" />
   <project name="android_hardware_qcom_bootctrl" path="hardware/qcom-caf/bootctrl" remote="sedona61" revision="refs/heads/lineage-24.0-6.1" />
-  <remove-project path="hardware/qcom-caf/common" optional="true" />
-  <project name="LineageOS/android_hardware_qcom-caf_common" path="hardware/qcom-caf/common" remote="github" revision="refs/heads/lineage-24.0">
-    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
-    <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
-    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm6375-6.1/Android.bp" />
-  </project>
+  <extend-project name="LineageOS/android_hardware_qcom-caf_common" path="hardware/qcom-caf/common" remote="github" revision="refs/heads/lineage-24.0">
+  <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+  <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
+  <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm6375-6.1/Android.bp" />
+  </extend-project>
   <remove-project path="hardware/qcom-caf/fogos-legacy-audio" optional="true" />
   <project name="android_hardware_qcom_audio" path="hardware/qcom-caf/fogos-legacy-audio" remote="sedona61" revision="refs/heads/lineage-24.0-6.1" />
   <remove-project path="hardware/qcom-caf/sm6375-6.1/display" optional="true" />
